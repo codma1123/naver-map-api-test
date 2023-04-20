@@ -3,7 +3,7 @@ import { computed, onMounted, onUnmounted, ref, toRefs } from "vue"
 const FULL_SIZE = 1920
 const MODAL_BREAK_POINT = 1500
 
-type Divice = 'xl' | 'lg' | 'md' | 'sm' | 'xs'
+export type Divice = 'xl' | 'lg' | 'md' | 'sm' | 'xs'
 
 const diviceMap: Record<number, Divice> = {
   1: 'xs',

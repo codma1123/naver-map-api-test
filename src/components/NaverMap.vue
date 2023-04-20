@@ -54,13 +54,9 @@ type InfoWindow = naver.maps.InfoWindow
 const { 
   DEFAULT_MARKER_SIZE, 
   DEFAULT_ZOOM_OPTIONS,
-  DEFAULT_WINDOWINFO_OPTIONS 
+  DEFAULT_WINDOWINFO_OPTIONS,
+  currentPosition
 } = useMapOptions()
-
-const currentPosition = reactive<Location>({
-  latitude: 0,
-  longitude: 0
-})
 
 const isError = ref<boolean>(false)
 const initLayers = ['']

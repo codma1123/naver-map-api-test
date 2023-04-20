@@ -18,19 +18,18 @@ const openModal = () => isModalOpen.value = false
     :class="['PlaceModal', isModalOpen ? 'active' : '']"
     @click.self="isModalOpen = true"
   >
-    <div>
-      <Transition name="fade">
-        <div v-if="isModalOpen" class="innerContent" @blur="isModalOpen = false">        
-          <button 
+    <Transition name="fade">
+      <div v-if="isModalOpen" class="innerContent" @blur="isModalOpen = false">        
+        <button 
           v-if="isMobile"
           class="CloseBtn"
-          @click="openModal">
+          @click="openModal"
+        >
           {{ btnText }}
         </button>
         <CustomDivider />
       </div>
     </Transition>
-    </div>
     <div 
       v-if="!isModalOpen && isMobile" class="openIcon"
       @click="openModal"
@@ -77,7 +76,7 @@ const openModal = () => isModalOpen.value = false
   align-items: center;
 }
 
-@media (max-width: 1276px) {
+@media (max-width: 1576px) {
   .PlaceModal {
     position: fixed;
     z-index: 1;
@@ -117,7 +116,7 @@ const openModal = () => isModalOpen.value = false
     cursor: pointer;
 
     &.active {
-      height: 600px;
+      height: 700px;
       cursor: default;
     }
   }
